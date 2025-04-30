@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel - Excelência Imóveis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Excelência Imóveis</h1>
+                <p>Encontre seu lar perfeito</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#imoveis">Imóveis</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="property-details">
+        <div class="container">
+            <!-- Galeria de Fotos -->
+            <section class="property-gallery">
+                <div class="main-image">
+                    <img id="main-property-image" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Imóvel">
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Imóvel">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sala de estar">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1600566752225-207d8b7dac17?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cozinha">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Quarto">
+                </div>
+            </section>
+
+            <!-- Informações do Imóvel -->
+            <section class="property-info">
+                <h1 id="property-title">Casa Moderna - Jardins</h1>
+                <p class="property-address"><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Jardins, São Paulo - SP</p>
+                <p class="property-price">R$ 1.200.000</p>
+                
+                <div class="property-features">
+                    <div class="feature">
+                        <i class="fas fa-bed"></i>
+                        <span>3 Quartos</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bath"></i>
+                        <span>2 Banheiros</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-car"></i>
+                        <span>2 Vagas</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>180 m²</span>
+                    </div>
+                </div>
+
+                <div class="property-description">
+                    <h2>Descrição</h2>
+                    <p>Excelente casa moderna localizada no bairro mais nobre da cidade. A propriedade conta com 3 quartos (sendo 1 suíte), 2 banheiros, cozinha americana integrada à sala de estar, área gourmet com churrasqueira, piscina e jardim.</p>
+                    <p>Totalmente mobiliada e equipada, pronta para morar. Localização privilegiada, próximo a escolas, shoppings e comércio. Não perca essa oportunidade!</p>
+                </div>
+
+                <div class="property-map">
+                    <h2>Localização</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502217!3d-23.56573436763838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623860000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulário de Interesse -->
+            <section class="interest-form">
+                <h2>Interessado no imóvel?</h2>
+                <p>Preencha o formulário abaixo e um de nossos corretores entrará em contato com você.</p>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Excelência Imóveis</h3>
+                <p>Sua parceira na busca pelo imóvel perfeito.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (11) 3333-4444</p>
+                <p><i class="fas fa-envelope"></i> contato@excelenciaimoveis.com.br</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 13h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Excelência Imóveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Carrega os dados do imóvel baseado no ID da URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const propertyId = urlParams.get('id');
+            
+            // Simulação de carregamento de dados do imóvel
+            if (propertyId) {
+                loadPropertyData(propertyId);
+            }
+            
+            // Galeria de fotos
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('main-property-image');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    mainImage.src = this.src;
+                });
+            });
+            
+            // Formulário de contato
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! Um corretor entrará em contato em breve.');
+                this.reset();
+            });
+        });
+        
+        function loadPropertyData(id) {
+            // Simulação de dados de imóveis
+            const properties = {
+                '1': {
+                    title: 'Casa Moderna - Jardins',
+                    address: 'Rua das Flores, 123 - Jardins, São Paulo - SP',
+                    price: 'R$ 1.200.000',
+                    description: 'Excelente casa moderna localizada no bairro mais nobre da cidade. A propriedade conta com 3 quartos (sendo 1 suíte), 2 banheiros, cozinha americana integrada à sala de estar, área gourmet com churrasqueira, piscina e jardim. Totalmente mobiliada e equipada, pronta para morar. Localização privilegiada, próximo a escolas, shoppings e comércio.',
+                    features: {
+                        bedrooms: 3,
+                        bathrooms: 2,
+                        parking: 2,
+                        area: 180
+                    },
+                    images: [
+                        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1600566752225-207d8b7dac17?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                '2': {
+                    title: 'Apartamento - Centro',
+                    address: 'Av. Paulista, 1000 - Centro, São Paulo - SP',
+                    price: 'R$ 450.000',
+                    description: 'Apartamento novo no coração da cidade. 2 quartos, 1 banheiro, sala ampla, cozinha planejada e área de serviço. Condomínio com piscina, salão de festas e academia. Excelente localização, próximo ao metrô e comércio.',
+                    features: {
+                        bedrooms: 2,
+                        bathrooms: 1,
+                        parking: 1,
+                        area: 65
+                    },
+                    images: [
+                        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                '3': {
+                    title: 'Casa de Campo - Interior',
+                    address: 'Estrada Rural, km 10 - Interior, SP',
+                    price: 'R$ 850.000',
+                    description: 'Encantadora casa de campo com 4 quartos, 3 banheiros, ampla área de lazer com piscina, churrasqueira e pomar. Terreno de 1.000m² com muito espaço e privacidade. Ideal para quem busca tranquilidade sem abrir mão do conforto.',
+                    features: {
+                        bedrooms: 4,
+                        bathrooms: 3,
+                        parking: 4,
+                        area: 350
+                    },
+                    images: [
+                        'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                    ]
+                }
+            };
+            
+            const property = properties[id] || properties['1'];
+            
+            // Atualiza a página com os dados do imóvel
+            document.getElementById('property-title').textContent = property.title;
+            document.querySelector('.property-address').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${property.address}`;
+            document.querySelector('.property-price').textContent = property.price;
+            document.querySelector('.property-description p').textContent = property.description;
+            
+            // Atualiza características
+            document.querySelector('.feature:nth-child(1) span').textContent = `${property.features.bedrooms} Quarto${property.features.bedrooms > 1 ? 's' : ''}`;
+            document.querySelector('.feature:nth-child(2) span').textContent = `${property.features.bathrooms} Banheiro${property.features.bathrooms > 1 ? 's' : ''}`;
+            document.querySelector('.feature:nth-child(3) span').textContent = `${property.features.parking} Vaga${property.features.parking > 1 ? 's' : ''}`;
+            document.querySelector('.feature:nth-child(4) span').textContent = `${property.features.area} m²`;
+            
+            // Atualiza imagens
+            const mainImage = document.getElementById('main-property-image');
+            const thumbnailsContainer = document.querySelector('.thumbnail-container');
+            
+            mainImage.src = property.images[0];
+            thumbnailsContainer.innerHTML = '';
+            
+            property.images.forEach((img, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                thumbnail.src = img;
+                thumbnail.alt = property.title;
+                thumbnail.addEventListener('click', function() {
+                    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    mainImage.src = this.src;
+                });
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+        }
+    </script>
+</body>
+</html>
