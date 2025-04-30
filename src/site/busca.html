@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Imóveis - Excelência Imóveis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Excelência Imóveis</h1>
+                <p>Encontre seu lar perfeito</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="busca.html" class="active">Buscar Imóveis</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="property-search">
+        <div class="container">
+            <h1 class="page-title">Encontre o imóvel perfeito</h1>
+            
+            <!-- Filtros de Busca -->
+            <section class="search-filters">
+                <div class="filter-card">
+                    <h2>Filtros</h2>
+                    <form id="search-form">
+                        <div class="filter-group">
+                            <label for="search-term">Palavra-chave</label>
+                            <input type="text" id="search-term" placeholder="Digite bairro, cidade ou característica">
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="property-type">Tipo de Imóvel</label>
+                            <select id="property-type">
+                                <option value="">Todos</option>
+                                <option value="casa">Casa</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="terreno">Terreno</option>
+                                <option value="comercial">Comercial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="purpose">Finalidade</label>
+                            <select id="purpose">
+                                <option value="">Todas</option>
+                                <option value="venda">Venda</option>
+                                <option value="aluguel">Aluguel</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="price-range">Faixa de Preço (R$)</label>
+                            <div id="price-range" class="range-slider"></div>
+                            <div class="range-values">
+                                <span id="min-price">0</span>
+                                <span id="max-price">5.000.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bedrooms">Quartos</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn" id="bedrooms-minus">-</button>
+                                <input type="number" id="bedrooms" value="0" min="0" max="10">
+                                <button type="button" class="qty-btn" id="bedrooms-plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bathrooms">Banheiros</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn" id="bathrooms-minus">-</button>
+                                <input type="number" id="bathrooms" value="0" min="0" max="10">
+                                <button type="button" class="qty-btn" id="bathrooms-plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="garage">Vagas</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="qty-btn" id="garage-minus">-</button>
+                                <input type="number" id="garage" value="0" min="0" max="10">
+                                <button type="button" class="qty-btn" id="garage-plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="area-range">Área (m²)</label>
+                            <div id="area-range" class="range-slider"></div>
+                            <div class="range-values">
+                                <span id="min-area">0</span>
+                                <span id="max-area">1000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label>Características</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="features" value="piscina"> Piscina</label>
+                                <label><input type="checkbox" name="features" value="churrasqueira"> Churrasqueira</label>
+                                <label><input type="checkbox" name="features" value="academia"> Academia</label>
+                                <label><input type="checkbox" name="features" value="mobiliado"> Mobiliado</label>
+                                <label><input type="checkbox" name="features" value="varanda"> Varanda</label>
+                                <label><input type="checkbox" name="features" value="elevador"> Elevador</label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-actions">
+                            <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                            <button type="reset" class="btn btn-secondary" id="reset-filters">Limpar Filtros</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Resultados da Busca -->
+            <section class="search-results">
+                <div class="results-header">
+                    <h2 id="results-count">12 imóveis encontrados</h2>
+                    <div class="sort-options">
+                        <label for="sort-by">Ordenar por:</label>
+                        <select id="sort-by">
+                            <option value="recent">Mais recentes</option>
+                            <option value="price-asc">Preço (menor para maior)</option>
+                            <option value="price-desc">Preço (maior para menor)</option>
+                            <option value="area-asc">Área (menor para maior)</option>
+                            <option value="area-desc">Área (maior para menor)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="property-grid" id="property-grid">
+                    <!-- Os imóveis serão carregados aqui via JavaScript -->
+                </div>
+                
+                <div class="pagination">
+                    <button class="btn btn-secondary" id="prev-page" disabled>Anterior</button>
+                    <span id="page-info">Página 1 de 3</span>
+                    <button class="btn btn-secondary" id="next-page">Próxima</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Excelência Imóveis</h3>
+                <p>Sua parceira na busca pelo imóvel perfeito.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal, 123 - Centro</p>
+                <p><i class="fas fa-phone"></i> (11) 3333-4444</p>
+                <p><i class="fas fa-envelope"></i> contato@excelenciaimoveis.com.br</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 13h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Excelência Imóveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
